@@ -9,8 +9,7 @@
     <servlet-name>Person1</servlet-name>
     <url-pattern>/person</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>Person2</servlet-name>
     <servlet-class>com.durasoft.PersonServlet</servlet-class>
   </servlet>
@@ -18,8 +17,7 @@
     <servlet-name>Person2</servlet-name>
     <url-pattern>/person2</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>Person3</servlet-name>
     <servlet-class>com.durasoft.PersonServlet</servlet-class>
   </servlet>
@@ -27,9 +25,6 @@
     <servlet-name>Person3</servlet-name>
     <url-pattern>/person3</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>Hello</servlet-name>
     <servlet-class>com.durasoft.HelloWorld</servlet-class>
