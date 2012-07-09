@@ -1,0 +1,8 @@
+Write a JSP(lab02.jsp) scriptlet that will display
+
+1. current time (new java.util.Date())
+2. the URL being visited
+3. web server host name
+4. the web server being used and the port of access
+5. the client name
+6. the client IP address

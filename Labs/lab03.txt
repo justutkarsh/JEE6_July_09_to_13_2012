@@ -1,0 +1,16 @@
+Create a addPerson.jsp page that has a form with the following fields.
+
+First Name, Last Name, Age
+
+On clicking the add button you will store the values in a AddPersonServlet and transfer control to display.jsp.
+
+display.jsp will display the first name,last name and age of all the persons in a tabular format.
+
+
+You can use the following values in addPerson.jsp
+
+Sam, Thomas, 25
+Ram, Narain, 40
+Sachin, Tendulkar, 39
+Roger, Federer, 30
+Krish, Srikanth, 60
