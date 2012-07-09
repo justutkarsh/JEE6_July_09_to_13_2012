@@ -1,0 +1,9 @@
+<html>
+	<body>
+		<h1>
+			<%
+				out.println(request.getAttribute("info"));
+			%>
+		</h1>
+	</body>
+</html>

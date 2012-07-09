@@ -4,6 +4,10 @@
   <servlet>
     <servlet-name>Person1</servlet-name>
     <servlet-class>com.durasoft.PersonServlet</servlet-class>
+    <init-param>
+      <param-name>firstName</param-name>
+      <param-value>Sachin</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>Person1</servlet-name>
