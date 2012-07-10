@@ -5,6 +5,19 @@
 	<tlib-version>1.0</tlib-version>
 	<short-name>Intuit</short-name>
 	<tag>
+		<name>person</name>
+		<tag-class>com.durasoft.PersonTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>age</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	<tag>
 		<name>helloWorld</name>
 		<tag-class>com.durasoft.HelloWorldTag</tag-class>
 		<body-content>empty</body-content>
