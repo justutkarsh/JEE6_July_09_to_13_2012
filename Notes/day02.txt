@@ -6,3 +6,16 @@ Cookie
 	keeps travelling back and forth btn client and server
 	you cannot too much/sensitive info in cookies
 	
+Session
+	collection of data 
+	stored in web server's memory
+	doesn't travel with request and response
+	keep track of the session using cookie
+	cookie "JSESSIONID" used to keep track of the session
+	20 minutes (depends on the server)
+	web farm (need to be careful)
+	HttpSession	
+
+
+NoSQL databases
+	martinfowler.com
