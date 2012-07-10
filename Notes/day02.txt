@@ -1,0 +1,8 @@
+Cookie
+	name-value pair
+	created by your application
+	stored in the client machine
+	has an expiry date
+	keeps travelling back and forth btn client and server
+	you cannot too much/sensitive info in cookies
+	
