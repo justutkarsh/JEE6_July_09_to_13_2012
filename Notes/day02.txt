@@ -1,3 +1,10 @@
+Custom Tag <intuit:helloWorld/>
+	
+	Tag needs a Tag Handler class
+	Tag Handler specifies the behaviour
+	tags need to be configured in TLD file
+	Use it in your JSP
+
 Cookie
 	name-value pair
 	created by your application
