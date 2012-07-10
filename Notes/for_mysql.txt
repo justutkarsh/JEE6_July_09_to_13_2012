@@ -1,0 +1,28 @@
+-->Create a database "personsdb"
+-->Create a table "persons" with the following columns 
+
+id int(4), auto_increment primary key
+first_name varchar(40)
+last_name varchar(40)
+age int(4)
+
+You can also use this query to create the database and table
+
+
+create database personsdb;
+
+create table personsdb.persons(
+ id int(4) primary key auto_increment,
+ first_name varchar(40),
+ last_name varchar(40),
+ age int(4)
+);
+
+
+--> Create a new Java Project "JDBC"
+--> Add the mysql-connector-XXX.jar file to the build path
+
+
+mysql server
+sqlyog client
+mysql connector jar
