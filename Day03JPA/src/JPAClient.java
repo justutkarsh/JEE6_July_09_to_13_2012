@@ -7,6 +7,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import com.durasoft.Company;
+import com.durasoft.Country;
 import com.durasoft.Dog;
 import com.durasoft.Person;
 
@@ -16,8 +17,14 @@ public class JPAClient {
 				Persistence.createEntityManagerFactory("PersonsUnit");
 		
 		EntityManager em = emf.createEntityManager();
-		
-		Company intuit = new Company("Intuit", "NY");
+		Country country = new Country("UK", "London");
+		EntityTransaction txn = em.getTransaction();
+		txn.begin();
+		em.persist(country);
+		System.out.println(em.createNamedQuery("selCountries").getResultList());
+
+		txn.commit();
+		/*Company intuit = new Company("Intuit", "NY");
 		em.persist(intuit);
 		
 		Person p1 = new Person("Ram", "Sharma", 39);
@@ -30,7 +37,7 @@ public class JPAClient {
 		EntityTransaction txn = em.getTransaction();
 		txn.begin();
 		em.persist(p1);
-		txn.commit();
+		txn.commit();*/
 		
 		
 		

@@ -1,0 +1,27 @@
+Given below are the tables that you will create in a database "jpalab02".
+
+users
+	id username password usertypeid
+	
+	101 sam23    abcde    1
+	102 ram21    12345    2	
+
+usertypes
+	id     description
+
+	1	Admin
+	2	Customer	
+
+persons
+	id 	name 		userid
+        1  	Sam Thomas	101
+	2	Ram krishnan	102
+
+
+1) Create the entity classes required
+2) Create a login page with user name and password textboxes.
+3) On successful login go to the home page where you display a message "Welcome <person name>"
+4) If the usertype is Admin you will list all the users( username and name)  in the home page. 
+
+
+	
