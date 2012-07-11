@@ -43,7 +43,7 @@ public class AccountsDao {
 	public List<Account> getAllAccounts(){
 		em = emf.createEntityManager();
 		List<Account> accounts = 
-				em.createQuery("select c from Account c").getResultList();
+				em.createQuery("select acc from Account acc").getResultList();
 		em.close();
 		return accounts;
 	}

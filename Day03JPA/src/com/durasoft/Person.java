@@ -1,16 +1,26 @@
 package com.durasoft;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="persons")
 public class Person {
 	@Id
-	//@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column
 	private int id;
 	@Column(name="first_name")
@@ -20,6 +30,29 @@ public class Person {
 	@Column
 	private int age;
 	
+	@ManyToOne(targetEntity=Company.class)
+	@JoinColumn(name="company_id")
+	private Company company;
+	
+	
+	@OneToMany(targetEntity=Dog.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="person_id")
+	private Set<Dog> dogs;
+	
+	
+	
+	public Company getCompany() {
+		return company;
+	}
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+	public Set<Dog> getDogs() {
+		return dogs;
+	}
+	public void setDogs(Set<Dog> dogs) {
+		this.dogs = dogs;
+	}
 	public Person(){
 		
 	}
