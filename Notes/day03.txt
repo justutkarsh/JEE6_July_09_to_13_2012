@@ -1,0 +1,14 @@
+ORM(Object Relational Mapping)
+
+Cons of JDBC
+	DB structure is complex, JDBC is nightmare
+	Tedious to maintain
+	changes to DB make lot of changes to query syntax
+ORM
+	create a class corresponding to the table
+	map the class with the table
+	map the variables with columns
+
+	Hibernate framework(RedHat)
+	TopLink(Oracle)
+	iBatis(not exactly ORM)
