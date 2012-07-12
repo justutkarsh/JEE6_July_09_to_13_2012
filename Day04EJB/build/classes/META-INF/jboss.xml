@@ -4,5 +4,9 @@
 			<ejb-name>IntuitWeatherReporterBean</ejb-name>
 			<jndi-name>MyReporter</jndi-name>
 		</session>
+		<session>
+			<ejb-name>AccountBean</ejb-name>
+			<jndi-name>Bank</jndi-name>
+		</session>
 	</enterprise-beans>
 </jboss>

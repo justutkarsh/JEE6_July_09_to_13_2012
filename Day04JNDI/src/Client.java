@@ -1,19 +1,35 @@
 import javax.naming.Context;
 import javax.naming.InitialContext;
 
-import com.durasoft.IntuitWeatherReporter;
-import com.durasoft.Person;
+import com.durasoft.SampleBeanRemote;
 
 public class Client {
 	public static void main(String[] args) throws Exception{
 		Context context = new InitialContext();
+		
+		SampleBeanRemote remote = 
+				(SampleBeanRemote)context.lookup("SampleBean/remote");
+		System.out.println(remote.getInfo());
+/*		SampleBeanLocal local = 
+				(SampleBeanLocal)context.lookup("SampleBean/local");
+		System.out.println(local.getInfo());
+*/		
+		
+/*		Account account = (Account)context.lookup("Bank");
+		account.deposit(3000);
+		account.withdraw(2000);
+		System.out.println("Please hit enter to proceed");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		br.readLine();
+		System.out.println(account.getBalance());*/
+		
 /*		IntuitWeatherReporter reporter = 
 				(IntuitWeatherReporter)context.lookup("IntuitWeatherReporterBean/remote");*/
-		IntuitWeatherReporter reporter = 
+/*		IntuitWeatherReporter reporter = 
 				(IntuitWeatherReporter)context.lookup("MyReporter");
 		System.out.println(reporter.getTemperature("Bengaluru"));
 		Thread.sleep(4000);
-		System.out.println(reporter.getInfo());		
+		System.out.println(reporter.getInfo());		*/
 		
 		
 		
