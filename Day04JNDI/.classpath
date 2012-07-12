@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="E:/Installed_Softwares/jboss-6.1.0.Final/client/jboss-aop-client.jar"/>
 	<classpathentry kind="lib" path="E:/Installed_Softwares/jboss-6.1.0.Final/client/jboss-aspect-jdk50-client.jar"/>
 	<classpathentry kind="lib" path="E:/Installed_Softwares/jboss-6.1.0.Final/client/jboss-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prabhu.E4LJBSL3AUMKO/Dropbox/Training_Programs/JEE_WS/JEE6_July_09_to_13_2012/Day04JNDI/IntuitWeatherReporterClient.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

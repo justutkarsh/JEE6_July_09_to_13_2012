@@ -1,12 +1,27 @@
 import javax.naming.Context;
 import javax.naming.InitialContext;
 
+import com.durasoft.IntuitWeatherReporter;
 import com.durasoft.Person;
 
 public class Client {
 	public static void main(String[] args) throws Exception{
 		Context context = new InitialContext();
-		Person person1 = new Person();
+/*		IntuitWeatherReporter reporter = 
+				(IntuitWeatherReporter)context.lookup("IntuitWeatherReporterBean/remote");*/
+		IntuitWeatherReporter reporter = 
+				(IntuitWeatherReporter)context.lookup("MyReporter");
+		System.out.println(reporter.getTemperature("Bengaluru"));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+/*		Person person1 = new Person();
 		person1.setName("Sam");
 		context.rebind("person1", person1);
 		
@@ -18,7 +33,7 @@ public class Client {
 		//System.out.println("Success");
 		//bind
 		String value = (String)context.lookup("intuit");
-		System.out.println(value);
+		System.out.println(value);*/
 		//lookup
 	}
 }
