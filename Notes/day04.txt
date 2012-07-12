@@ -1,0 +1,22 @@
+RMI and JNDI
+	Remote Method Invocation
+	Java Naming and Directory Interface
+		
+
+JBoss AS
+	latest version is 7
+	community(free) and enterprise editions(fee)
+	we'll use v.6
+
+JBoss V6
+	[client] folder
+		contains jar files reqd by the client accessing 		applications running in jboss
+	[common] folder
+		put common jars
+	[server]
+		collection of configuration sets all, default, 		minimal ..etc
+		can create your own
+		'default' is used by default
+		[deploy] folder in your configuration set is where you 		deploy EJBs/Web applications etc
+
+		

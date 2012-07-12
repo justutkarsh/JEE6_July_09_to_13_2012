@@ -1,3 +1,4 @@
+INSERT INTO persons (ID, AGE, first_name, last_name) VALUES (?, ?, ?, ?)
 ORM(Object Relational Mapping)
 
 Cons of JDBC
@@ -12,3 +13,4 @@ ORM
 	Hibernate framework(RedHat)
 	TopLink(Oracle)
 	iBatis(not exactly ORM)
+
