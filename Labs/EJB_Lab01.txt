@@ -1,0 +1,69 @@
+You will practice using Stateless Session beans in this lab.
+
+Application Name: HotelApp
+JNDI Name: HotelInformation
+
+Write a remote interface called HotelInfo. It has two methods:
+
+public boolean getAvailability(Date start, Date end);
+public double getRate(Date start, Date end);
+
+Write a stateless session bean called HotelInfoBean which implements the remote interface's methods as follows:
+
+getAvailability():
+		throws Exception if start date after end date
+		returns a random generated true or false
+
+getRate()
+		throws Exception if start date after end date
+		returns a random dollar amount.
+
+Implement the session bean and run the following code in the Client.
+
+**************Client code********************
+
+public class Client
+{
+	public static void main(String[] args) 
+	{
+		try 
+		{
+           Context context = new InitialContext();
+		   HotelInfo info = (HotelInfo)context.lookup("HotelInformation");
+
+			try
+			{
+					DateFormat dateFmt = DateFormat.getDateInstance(
+							DateFormat.SHORT, Locale.US);
+				System.out.println("Availability: " + 
+						info.getAvailability(dateFmt.parse("06/01/2006"),
+									dateFmt.parse("06/02/2007")));
+
+				System.out.println("Availability: " + 
+						info.getAvailability(dateFmt.parse("07/01/2006"),
+									dateFmt.parse("07/02/2007")));
+
+				System.out.println("Availability: " + 
+						info.getAvailability(dateFmt.parse("07/01/2000"),
+									dateFmt.parse("08/02/2000")));
+
+				System.out.println("Rate: " + 
+						info.getRate(dateFmt.parse("07/01/2000"),
+									dateFmt.parse("08/02/2000")));
+
+				System.out.println("Availability: " + 
+						info.getAvailability(dateFmt.parse("07/01/2000"),
+									dateFmt.parse("06/02/2000")));
+			}
+			catch(Exception e)
+			{
+				System.out.println("Error: " + e);
+			}
+
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: " + e);
+		}
+   } 
+}
