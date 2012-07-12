@@ -12,7 +12,8 @@ public class Client {
 		IntuitWeatherReporter reporter = 
 				(IntuitWeatherReporter)context.lookup("MyReporter");
 		System.out.println(reporter.getTemperature("Bengaluru"));
-		
+		Thread.sleep(4000);
+		System.out.println(reporter.getInfo());		
 		
 		
 		
