@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://durasoft.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://durasoft.com" xmlns:intf="http://durasoft.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://durasoft.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getTemperature">
+    <complexType>
+     <sequence>
+      <element name="city" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTemperatureResponse">
+    <complexType>
+     <sequence>
+      <element name="getTemperatureReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getTemperatureResponse">
+
+      <wsdl:part element="impl:getTemperatureResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTemperatureRequest">
+
+      <wsdl:part element="impl:getTemperature" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WeatherReporter">
+
+      <wsdl:operation name="getTemperature">
+
+         <wsdl:input message="impl:getTemperatureRequest" name="getTemperatureRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTemperatureResponse" name="getTemperatureResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WeatherReporterSoapBinding" type="impl:WeatherReporter">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getTemperature">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTemperatureRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTemperatureResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WeatherReporterService">
+
+      <wsdl:port binding="impl:WeatherReporterSoapBinding" name="WeatherReporter">
+
+         <wsdlsoap:address location="http://localhost:8080/Day05WebServices/services/WeatherReporter"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
