@@ -1,0 +1,15 @@
+--Step 1--
+
+--> Create a web application "JEE6" in JBoss 6.xxx
+--> Create a JSP page with the following textboxes
+
+Employee Id, Employee Name, Date of Joining
+On clicking the "Add" button you will add the details to the database("employees table" in "employeesdb").
+Redirect to a page that lists all the employees in a tabular format.
+
+--> You will use JPA to talk to the Database
+--> JPA will use a datasource "java:/BankDS"
+
+
+
+

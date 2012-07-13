@@ -3,6 +3,9 @@
     <wb-module deploy-name="Day01">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/Day04JNDI/Day04JNDI">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="Day01"/>
         <property name="java-output-path" value="/Day01/build/classes"/>
     </wb-module>
