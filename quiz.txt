@@ -1,0 +1,74 @@
+1) What is Serialization?
+
+
+
+2) What is the difference between Global JNDI namespace and java: namespace?
+
+
+
+3) When do you create a Local Business interface for your stateless session bean?
+
+
+
+4) How many Stateless session beans get created after deployment?
+
+
+5) Expand the following.
+
+JSTL
+TLD
+JMS
+REST
+JMX
+ANT
+
+6) What is the base class for all Tag Handler classes?
+
+
+7) How do you refer to the ServletContext object in JSP?
+
+
+8) How can you use multiple databases in JPA?
+
+
+
+9) When a client invokes an EJB what is the object it's actually invoking the method on?
+
+
+10) What is a web farm?
+
+
+11) What is the relationship between cookies and sessions?
+
+
+12) What is the difference between EJB and Spring framework?
+
+
+13) Name any 3 implementations of JPA
+
+
+14) How do you configure a datasource in JBoss AS 6.XXX?
+
+
+15) What is dependency injection?
+
+
+
+16) How do you inject JPA entity manager in servlet or EJB?
+
+
+17) What is Activation and Passivation in Stateful session beans?
+
+
+
+18) Show the code to get a Connection from a datasource "java:/TestDS"? 
+
+
+
+
+19) Explain @WebInitParam
+
+
+
+
+20) What's the latest version of Eclipse ? :)
