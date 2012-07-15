@@ -1,0 +1,83 @@
+1) What is Serialization?
+serialization stands for converting a object into bytes or prefereably some other format say xml to transfer objects over network or a way of communicating between two jvms.
+
+
+2) What is the difference between Global JNDI namespace and java: namespace?
+In Global JNDI name space any one can access the resource inside/outside the jvm where as in case of java:namespace only the application running in JVM
+can access and use the resource using context lookup.
+
+
+3) When do you create a Local Business interface for your stateless session bean?
+local business interface is used when the access has to be done from same jvm where has if some other client/machine network is trying to access the bean
+remote interface is used.
+
+
+4) How many Stateless session beans get created after deployment?
+the number of stateless session beans depends on the number of calls the client is making.For each call a separate bean is created
+there can be a pool that can be maintained
+
+5) Expand the following.
+
+JSTL   Java server Tag library "used for reusing existing code / methods for ease and quick dev"
+TLD   
+JMS    java messaging service used for asynchronous communication between two entities/beans  two models p2p and publish/subscribe
+REST   Representional state transfer protocol GET CRUD using url  a a state is mapped to particular url on internet (web service)
+JMX
+ANT    a tool used for building and deploying  compiling classes and moving maven is used popularly nowadays
+
+6) What is the base class for all Tag Handler classes?
+
+
+
+7) How do you refer to the ServletContext object in JSP?
+   request.getServletContext()
+
+8) How can you use multiple databases in JPA?
+   persistence.xml
+
+
+9) When a client invokes an EJB what is the object it's actually invoking the method on?
+   its communicating via proxy but method is invoked on bean itself
+
+10) What is a web farm?
+collective group of servers servicing same thing.   
+
+
+11) What is the relationship between cookies and sessions?
+    cookies are sent in requests to/fro server to client maintains information of user comes with expiry date
+    sessions are maintained on server side you can set cookies inside sessions using session tracking apis
+
+12) What is the difference between EJB and Spring framework?
+   spring framework is light weight container whereas EJB is heavyweight and inertial
+   
+
+13) Name any 3 implementations of JPA
+    hibernate,eclipselink,?->weblogic
+    jdo is better with datanucleus
+14) How do you configure a datasource in JBoss AS 6.XXX?
+     in server/default/deploy/xxxx-ds.xml
+
+15) What is dependency injection?
+  injecting and instantiating the class without context lookup
+
+
+16) How do you inject JPA entity manager in servlet or EJB?
+@(PersistentEntity = "xxx")
+
+17) What is Activation and Passivation in Stateful session beans?
+if a client is holding references for long time the bean is rendered passivated and vice versa
+
+
+18) Show the code to get a Connection from a datasource "java:/TestDS"? 
+      Contect context = new InitialContext();
+      Connection conn = (Connection)context.lookup("java:/TestDS")
+
+
+
+19) Explain @WebInitParam
+
+initialize servlet when its loaded ?
+
+
+20) What's the latest version of Eclipse ? :)
+juno
